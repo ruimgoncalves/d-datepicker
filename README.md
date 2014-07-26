@@ -30,7 +30,9 @@ In template
 -------
    
     <Body:>
-      <datepicker active="{{post.date}}"></datepicker>
+      <datepicker active="{{post.date1}}"></datepicker>
+      <!-- inline -->
+      <datepicker active="{{post.date2}}" inline></datepicker>
       
 Retrieve data
 --------

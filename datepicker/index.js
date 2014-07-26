@@ -17,6 +17,13 @@ Datepicker.prototype.init = function(model) {
   this.gotoMonthView(currentDate);
 };
 
+Datepicker.prototype.create = function(model, dom) {
+  var _this = this;
+  dom.on('click', function(e) {
+    model.set('show', _this.parent.contains(e.target));
+  })
+};
+
 Datepicker.prototype.gotoMonthView = function(date) {
   var date = moment(date);
 

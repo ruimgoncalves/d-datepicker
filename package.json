@@ -1,12 +1,12 @@
 {
-  "name": "derby-datepicker",
+  "name": "d-datepicker",
   "description": "A datepicker for Derby.js (bootstrap theme).",
   "version": "0.1.1",
-  "homepage": "https://github.com/NAndreasson/derby-datepicker",
+  "homepage": "https://github.com/icaliman/d-datepicker",
   "author": "Niklas Andréasson <niklas@nandreasson.se> (http://nandreasson.se)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/NAndreasson/derby-datepicker.git"
+    "url": "git@github.com:icaliman/d-datepicker.git"
   },
   "dependencies": {
     "moment": "2.6.0"

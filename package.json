@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://github.com/icaliman/d-datepicker",
   "main": "lib/index.js",
-  "author":"John Caliman",
+  "author": "John Caliman",
   "license": "MIT",
   "keywords": [
     "datepicker",
@@ -26,6 +26,9 @@
   "scripts": {
     "test": "grunt",
     "prepublish": "grunt"
+  },
+  "dependencies": {
+    "moment": "~2.7.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

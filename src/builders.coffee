@@ -1,4 +1,4 @@
-moment = require 'moment'
+moment = require "moment/min/moment-with-langs.min"
 
 exports.buildYearView = (date) ->
   months = []

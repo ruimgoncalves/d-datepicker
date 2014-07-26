@@ -1,4 +1,4 @@
-moment = require "moment"
+moment = require "moment/min/moment-with-langs.min"
 
 exports.ViewHelpers = class ViewHelpers
 
@@ -29,3 +29,9 @@ exports.ViewHelpers = class ViewHelpers
     activeDate = moment(active)
     yearDate = moment(year: year)
     activeDate.year() is yearDate.year()
+
+  weekDays: ->
+    days = []
+    for i in [0..6]
+      days.push moment.weekdaysMin(i)
+    days

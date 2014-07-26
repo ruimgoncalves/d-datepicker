@@ -1,15 +1,18 @@
-moment = require("moment")
+moment = require "moment/min/moment-with-langs.min"
 ViewHelpers = require("./viewHelpers").ViewHelpers
-builders = require("./builders")
+builders = require "./builders"
 
 module.exports = class Datepicker extends ViewHelpers
   view: __dirname + "/../views"
 
   init: (model) ->
+    @lang = model.get("lang") || "en"
+    moment.lang @lang
     currentDate = moment()
     @gotoMonthView currentDate
   
   create: (model, dom) ->
+    global.moment = moment
     dom.on "click", (e) =>
       model.set "show", true if @parent.contains(e.target)
     dom.on "mousedown", (e) =>

@@ -43,13 +43,9 @@
           <th on-click="nextMonth()" class="next" style="visibility: visible;">»</th>
         </tr>
         <tr>
-          <th class="dow">Su</th>
-          <th class="dow">Mo</th>
-          <th class="dow">Tu</th>
-          <th class="dow">We</th>
-          <th class="dow">Th</th>
-          <th class="dow">Fr</th>
-          <th class="dow">Sa</th>
+          {{each weekDays() as #day}}
+            <th class="dow">{{#day}}</th>
+          {{/}}
           </tr>
       </thead>
       <tbody>

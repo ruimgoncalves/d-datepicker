@@ -3,6 +3,10 @@ d-datepicker
 
 Datepicker component for derby.js.
 
+1. Datepicker tied to a standard form input field.
+2. Inline datepicker.
+3. Localized datepicker.
+
 !["Screenshot of datepicker component"](https://raw.githubusercontent.com/NAndreasson/derby-datepicker/gh-pages/images/datepicker.png "Datepicker screenshot")
 
 Please note that this project is inspired by [Bootstrap-datepicker](https://github.com/eternicode/bootstrap-datepicker), and makes use of a css-file from that project.
@@ -32,6 +36,9 @@ In template
 
       <!-- inline datepicker -->
       <datepicker active="{{post.date}}" inline></datepicker>
+
+      <!-- localized datepicker -->
+      <datepicker active="{{post.date}}" inline lang="fr"></datepicker>
       
 Retrieve data
 --------

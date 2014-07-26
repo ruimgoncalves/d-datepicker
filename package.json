@@ -1,17 +1,37 @@
 {
   "name": "d-datepicker",
-  "description": "A datepicker for Derby.js (bootstrap theme).",
-  "version": "0.1.1",
+  "version": "0.0.0",
+  "description": "",
   "homepage": "https://github.com/icaliman/d-datepicker",
-  "author": "Niklas Andréasson <niklas@nandreasson.se> (http://nandreasson.se)",
+  "main": "lib/index.js",
+  "author":"John Caliman",
+  "license": "MIT",
+  "keywords": [
+    "datepicker",
+    "derby-component"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "directories": {
+    "test": "test"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:icaliman/d-datepicker.git"
+    "url": "https://github.com/icaliman/d-datepicker.git"
   },
-  "dependencies": {
-    "moment": "2.6.0"
-    },
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "engines": {}
+  "bugs": {
+    "url": "https://github.com/icaliman/d-datepicker/issues"
+  },
+  "scripts": {
+    "test": "grunt",
+    "prepublish": "grunt"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-mocha-test": "~0.9.0",
+    "mocha": "~1.17.1",
+    "chai": "~1.9.0"
+  }
 }

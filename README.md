@@ -1,10 +1,7 @@
 d-datepicker
-================
+=====
 
 Datepicker component for derby.js.
-
-At the time being there is only an inline version. If you have any suggestions or improvements, open an issue or send a pull request!
-
 
 !["Screenshot of datepicker component"](https://raw.githubusercontent.com/NAndreasson/derby-datepicker/gh-pages/images/datepicker.png "Datepicker screenshot")
 
@@ -18,21 +15,23 @@ Dates set by datepicker will be in the format `YYYY-MM-DD` (2014-04-16).
 Example usage
 =====
 
-First of make sure to install derby-datepicker through npm `npm install derby-datepicker`.
+First of make sure to install d-datepicker through npm `npm install d-datepicker`.
 
 
 Including
 --------
     
-    app.use(require('derby-datepicker'));
+    app.use(require('d-datepicker'));
         
 In template
 -------
    
     <Body:>
-      <datepicker active="{{post.date1}}"></datepicker>
-      <!-- inline -->
-      <datepicker active="{{post.date2}}" inline></datepicker>
+      <!-- datepicker tied to a standard form input field -->
+      <datepicker active="{{post.date}}"></datepicker>
+
+      <!-- inline datepicker -->
+      <datepicker active="{{post.date}}" inline></datepicker>
       
 Retrieve data
 --------

@@ -4,10 +4,15 @@ d-datepicker
 Datepicker component for derby.js.
 
 1. Datepicker tied to a standard form input field.
+
 !["Screenshot of datepicker component"](https://raw.githubusercontent.com/icaliman/d-datepicker/gh-pages/images/datepicker-month.png "Datepicker screenshot")
+
 2. Inline datepicker.
+
 !["Screenshot of datepicker component"](https://raw.githubusercontent.com/icaliman/d-datepicker/gh-pages/images/datepicker-inline.png "Datepicker screenshot")
+
 3. Localized datepicker.
+
 !["Screenshot of datepicker component"](https://raw.githubusercontent.com/icaliman/d-datepicker/gh-pages/images/datepicker-fr.png "Datepicker screenshot")
 
 Please note that this project is inspired by [Bootstrap-datepicker](https://github.com/eternicode/bootstrap-datepicker), and makes use of a css-file from that project.

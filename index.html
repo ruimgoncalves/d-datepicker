@@ -40,8 +40,11 @@
 
     <p>Datepicker component for derby.js.</p>
 
-    <p>At the time being there is only an inline version. If you have any suggestions or improvements, open an issue or
-      send a pull request!</p>
+    <ol>
+      <li>Datepicker tied to a standard form input field.</li>
+      <li>Inline datepicker.</li>
+      <li>Localized datepicker.</li>
+    </ol>
 
     <p>Please note that this project is inspired by <a href="https://github.com/eternicode/bootstrap-datepicker">Bootstrap-datepicker</a>,
       and makes use of a css-file from that project.</p>
@@ -68,9 +71,17 @@
       <a name="in-template" class="anchor" href="#in-template"><span class="octicon octicon-link"></span></a>In template
     </h2>
 
-<pre><code>&lt;Body:&gt;
-  &lt;datepicker active="{{post.date}}"&gt;&lt;/datepicker&gt;
-</code></pre>
+<pre>
+  <code>&ltBody:&gt
+    &lt!-- datepicker tied to a standard form input field --&gt
+    &ltdatepicker active="{{post.date}}"&gt&lt/datepicker&gt
+
+    &lt!-- inline datepicker --&gt
+    &ltdatepicker active="{{post.date}}" inline&gt&lt/datepicker&gt
+
+    &lt!-- localized datepicker --&gt
+    &ltdatepicker active="{{post.date}}" inline lang="fr"&gt&lt/datepicker></code>
+</pre>
 
     <h2>
       <a name="retrieve-data" class="anchor" href="#retrieve-data"><span class="octicon octicon-link"></span></a>Retrieve

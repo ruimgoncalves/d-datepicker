@@ -1,6 +1,6 @@
 {
   "name": "d-datepicker",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "homepage": "https://github.com/icaliman/d-datepicker",
   "main": "lib/index.js",

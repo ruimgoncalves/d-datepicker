@@ -4,6 +4,8 @@ builders = require "./builders"
 
 module.exports = class Datepicker extends ViewHelpers
   view: __dirname + "/../views"
+  name: 'd-datepicker'
+
 
   init: (model) ->
     @lang = model.get("lang") || "en"

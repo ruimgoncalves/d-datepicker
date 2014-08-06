@@ -25,21 +25,27 @@ Dates set by datepicker will be in the format `YYYY-MM-DD` (2014-04-16).
 First of make sure to install d-datepicker through npm `npm install d-datepicker`.
 
 ## Including
-    
-    app.use(require('d-datepicker'));
+
+```js
+app.use(require('d-datepicker'));
+```
         
 ## In template
    
-    <Body:>
-      <!-- datepicker tied to a standard form input field -->
-      <datepicker active="{{post.date}}"></datepicker>
+```html
+<Body:>
+  <!-- datepicker tied to a standard form input field -->
+  <datepicker active="{{post.date}}"></datepicker>
 
-      <!-- inline datepicker -->
-      <datepicker active="{{post.date}}" inline></datepicker>
+  <!-- inline datepicker -->
+  <datepicker active="{{post.date}}" inline></datepicker>
 
-      <!-- localized datepicker -->
-      <datepicker active="{{post.date}}" inline lang="fr"></datepicker>
+  <!-- localized datepicker -->
+  <datepicker active="{{post.date}}" inline lang="fr"></datepicker>
+```      
       
 ## Retrieve data
 
-    var pickedDate = model.get('post.date');
+```js
+var pickedDate = model.get('post.date');
+```

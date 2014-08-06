@@ -6,8 +6,11 @@ Datepicker component for Derby.
 <p align="center"><img src="https://raw.githubusercontent.com/icaliman/d-datepicker/gh-pages/images/datepicker-inline.png" alt="Screenshot of datepicker component"/></p>
 
 Features:
+
 1. Datepicker tied to a standard form input field.
+
 2. Inline datepicker.
+
 3. Localized datepicker.
 
 

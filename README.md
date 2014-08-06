@@ -19,17 +19,17 @@ Dates set by datepicker will be in the format `YYYY-MM-DD` (2014-04-16).
 
 1. Use personalized formats for dates.
 
-# Example usage
+# Usage example
 
 First of make sure to install d-datepicker through npm `npm install d-datepicker`.
 
-## Including
+### Including
 
 ```js
 app.use(require('d-datepicker'));
 ```
         
-## In template
+### In template
    
 ```html
 <Body:>
@@ -43,7 +43,7 @@ app.use(require('d-datepicker'));
   <datepicker active="{{post.date}}" inline lang="fr"></datepicker>
 ```      
       
-## Retrieve data
+### Retrieve data
 
 ```js
 var pickedDate = model.get('post.date');

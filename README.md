@@ -16,8 +16,7 @@ Please note that this project is inspired by [Bootstrap-datepicker](https://gith
 Dates set by datepicker will be in the format `YYYY-MM-DD` (2014-04-16).
 
 ## TODO
-
-1. Use personalized formats for dates.
+* Use personalized formats for dates.
 
 ## Usage example
 

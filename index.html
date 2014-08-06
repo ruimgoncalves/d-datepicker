@@ -18,7 +18,7 @@
 
       <header>
         <h1>d-datepicker</h1>
-        <p>Datepicker component for derby.js</p>
+        <p>Datepicker component for Derby.</p>
       </header>
 
       <div id="banner">
@@ -42,19 +42,20 @@
         <h1>
 <a name="d-datepicker" class="anchor" href="#d-datepicker"><span class="octicon octicon-link"></span></a>d-datepicker</h1>
 
-<p>Datepicker component for derby.js.</p>
+<p>Datepicker component for Derby.</p>
 
-<ol>
-<li>
-<p>Datepicker tied to a standard form input field.</p>
+<p align="center"><img src="https://raw.githubusercontent.com/icaliman/d-datepicker/gh-pages/images/datepicker-inline.png" alt="Screenshot of datepicker component"></p>
 
-<p><img src="https://raw.githubusercontent.com/icaliman/d-datepicker/gh-pages/images/datepicker-month.png" alt='"Screenshot of datepicker component"' title="Datepicker screenshot"></p>
-</li>
-<li><p>Inline datepicker.</p></li>
+<p>Please note that this project is inspired by <a href="https://github.com/eternicode/bootstrap-datepicker">Bootstrap-datepicker</a>, and makes use of a css-file from that project.</p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features:</h2>
+
+<ul>
+<li>Datepicker tied to a standard form input field.</li>
+<li>Inline datepicker.</li>
 <li>Localized datepicker.</li>
-</ol><p>Please note that this project is inspired by <a href="https://github.com/eternicode/bootstrap-datepicker">Bootstrap-datepicker</a>, and makes use of a css-file from that project.</p>
-
-<h1>
+</ul><h1>
 <a name="format" class="anchor" href="#format"><span class="octicon octicon-link"></span></a>Format</h1>
 
 <p>Dates set by datepicker will be in the format <code>YYYY-MM-DD</code> (2014-04-16).</p>
@@ -65,35 +66,35 @@
 <ol>
 <li>Use personalized formats for dates.</li>
 </ol><h1>
-<a name="example-usage" class="anchor" href="#example-usage"><span class="octicon octicon-link"></span></a>Example usage</h1>
+<a name="usage-example" class="anchor" href="#usage-example"><span class="octicon octicon-link"></span></a>Usage example</h1>
 
 <p>First of make sure to install d-datepicker through npm <code>npm install d-datepicker</code>.</p>
 
-<h2>
-<a name="including" class="anchor" href="#including"><span class="octicon octicon-link"></span></a>Including</h2>
+<h3>
+<a name="including" class="anchor" href="#including"><span class="octicon octicon-link"></span></a>Including</h3>
 
-<pre><code>app.use(require('d-datepicker'));
-</code></pre>
+<div class="highlight highlight-js"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'d-datepicker'</span><span class="p">));</span>
+</pre></div>
 
-<h2>
-<a name="in-template" class="anchor" href="#in-template"><span class="octicon octicon-link"></span></a>In template</h2>
+<h3>
+<a name="in-template" class="anchor" href="#in-template"><span class="octicon octicon-link"></span></a>In template</h3>
 
-<pre><code>&lt;Body:&gt;
-  &lt;!-- datepicker tied to a standard form input field --&gt;
-  &lt;datepicker active="{{post.date}}"&gt;&lt;/datepicker&gt;
+<div class="highlight highlight-html"><pre><span class="nt">&lt;Body:&gt;</span>
+  <span class="c">&lt;!-- datepicker tied to a standard form input field --&gt;</span>
+  <span class="nt">&lt;datepicker</span> <span class="na">active=</span><span class="s">"{{post.date}}"</span><span class="nt">&gt;&lt;/datepicker&gt;</span>
 
-  &lt;!-- inline datepicker --&gt;
-  &lt;datepicker active="{{post.date}}" inline&gt;&lt;/datepicker&gt;
+  <span class="c">&lt;!-- inline datepicker --&gt;</span>
+  <span class="nt">&lt;datepicker</span> <span class="na">active=</span><span class="s">"{{post.date}}"</span> <span class="na">inline</span><span class="nt">&gt;&lt;/datepicker&gt;</span>
 
-  &lt;!-- localized datepicker --&gt;
-  &lt;datepicker active="{{post.date}}" inline lang="fr"&gt;&lt;/datepicker&gt;
-</code></pre>
+  <span class="c">&lt;!-- localized datepicker --&gt;</span>
+  <span class="nt">&lt;datepicker</span> <span class="na">active=</span><span class="s">"{{post.date}}"</span> <span class="na">inline</span> <span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;&lt;/datepicker&gt;</span>
+</pre></div>
 
-<h2>
-<a name="retrieve-data" class="anchor" href="#retrieve-data"><span class="octicon octicon-link"></span></a>Retrieve data</h2>
+<h3>
+<a name="retrieve-data" class="anchor" href="#retrieve-data"><span class="octicon octicon-link"></span></a>Retrieve data</h3>
 
-<pre><code>var pickedDate = model.get('post.date');
-</code></pre>
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">pickedDate</span> <span class="o">=</span> <span class="nx">model</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'post.date'</span><span class="p">);</span>
+</pre></div>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/icaliman">icaliman</a></p>

@@ -1,7 +1,7 @@
 d-datepicker
 =====
 
-Datepicker component for derby.js.
+Datepicker component for Derby.
 
 1. Datepicker tied to a standard form input field.
 

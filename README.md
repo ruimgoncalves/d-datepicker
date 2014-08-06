@@ -11,15 +11,15 @@ Please note that this project is inspired by [Bootstrap-datepicker](https://gith
 * Inline datepicker.
 * Localized datepicker.
 
-# Format
+## Format
 
 Dates set by datepicker will be in the format `YYYY-MM-DD` (2014-04-16).
 
-# TODO
+## TODO
 
 1. Use personalized formats for dates.
 
-# Usage example
+## Usage example
 
 First of make sure to install d-datepicker through npm `npm install d-datepicker`.
 

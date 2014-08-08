@@ -3,7 +3,7 @@ moment = require "moment/min/moment-with-langs.min"
 exports.ViewHelpers = class ViewHelpers
 
   getMonth: (currentDate) ->
-    moment(currentDate).format "MMMM"
+    moment(currentDate).lang(@lang).format "MMMM"
 
   getYear: (currentDate) ->
     moment(currentDate).format "YYYY"
@@ -32,6 +32,7 @@ exports.ViewHelpers = class ViewHelpers
 
   weekDays: ->
     days = []
+    moment.lang @lang
     for i in [0..6]
       days.push moment.weekdaysMin(i)
     days

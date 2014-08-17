@@ -1,6 +1,6 @@
 moment = require "moment/min/moment-with-langs.min"
 ViewHelpers = require("./viewHelpers").ViewHelpers
-builders = require "./builders"
+Builders = require "./builders"
 
 module.exports = class Datepicker extends ViewHelpers
   view: __dirname + "/../views"
@@ -9,6 +9,7 @@ module.exports = class Datepicker extends ViewHelpers
 
   init: (model) ->
     @lang = model.get("lang") || "en"
+    @builders = new Builders(@lang, moment)
     currentDate = moment()
     @gotoMonthView currentDate
   
@@ -26,7 +27,7 @@ module.exports = class Datepicker extends ViewHelpers
   monthView: (date) ->
     return unless date
     date = moment(date)
-    weeks = builders.buildMonthView(date)
+    weeks = @builders.buildMonthView(date)
     @model.set "weeks", weeks
     @model.set "view", "month"
   
@@ -36,7 +37,7 @@ module.exports = class Datepicker extends ViewHelpers
     @yearView date
   
   yearView: (date) ->
-    months = builders.buildYearView(date)
+    months = @builders.buildYearView(date)
     @model.set "months", months
     @model.set "view", "year"
   
@@ -62,7 +63,7 @@ module.exports = class Datepicker extends ViewHelpers
     @decadeView date
   
   decadeView: (date) ->
-    years = builders.buildDecadeView(date)
+    years = @builders.buildDecadeView(date)
     @model.set "years", years
     @model.set "view", "decade"
   

@@ -1,6 +1,6 @@
 {
   "name": "d-datepicker",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Datepicker component for Derby",
   "homepage": "http://icaliman.github.io/d-datepicker/",
   "main": "lib/index.js",

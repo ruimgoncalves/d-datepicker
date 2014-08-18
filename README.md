@@ -47,3 +47,7 @@ app.use(require('d-datepicker'));
 ```js
 var pickedDate = model.get('post.date');
 ```
+
+### Test
+
+<iframe src="https://github.com/derbyjs/derby-examples">

@@ -11,7 +11,7 @@
         <view name="decade"></view>
       {{/if}}
     {{else}}
-      <input type="text" value="{{active}}" class="form-control" on-focus="model.set('show', true)">
+      <input type="text" value="{{active}}" class="form-control" on-focus="model.set('show', true)" on-keydown="keyDown($event)">
 
       <div style="position: relative">
         <div class="datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-top" style="display: {{if show}}block{{/}};">
@@ -52,7 +52,7 @@
       {{each weeks as #datesInWeek, #i}}
         <tr>
         {{each #datesInWeek as #date, #j}}
-          <td on-click="select(#date)" class="day {{if !#date.thisMonth}}old{{/if}} {{if #date.isToday}}today{{/if}} {{if activeDate(active, #date.isoDate)}}active{{/if}}">{{#date.date}}</td>
+          <td on-click="select(#date)" class="day {{if !#date.thisMonth}}old{{/if}} {{if #date.isToday}}today{{/if}} {{if isSame(value, #date.isoDate, 'day')}}active{{/if}}">{{#date.date}}</td>
         {{/each}}
         </tr>
       {{/each}}
@@ -74,7 +74,7 @@
         <tr>
           <td colspan="7">
           {{each months as #month}}
-            <span on-click="gotoMonthView(#month.date)" class="month {{if activeMonth(active, #month.date)}}active{{/if}}">{{#month.abbr}}</span>
+            <span on-click="gotoMonthView(#month.date)" class="month {{if isSame(value, #month.date, 'month')}}active{{/if}}">{{#month.abbr}}</span>
           {{/each}}
           </td>
         </tr>
@@ -96,7 +96,7 @@
         <tr>
           <td colspan="7">
           {{each years as #year}}
-            <span on-click="gotoYearView(#year.year)" class="year {{if !#year.inDecade}}old{{/if}} {{if activeYear(active, #year.year)}}active{{/if}}">{{#year.year}}</span>
+            <span on-click="gotoYearView(#year.year)" class="year {{if !#year.inDecade}}old{{/if}} {{if isSame(value, #year.year, 'year')}}active{{/if}}">{{#year.year}}</span>
           {{/each}}
           </td>
         </tr>

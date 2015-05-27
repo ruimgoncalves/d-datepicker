@@ -8,18 +8,24 @@ module.exports = class Datepicker extends ViewHelpers
 
 
   init: (model) ->
-    @lang = model.get("lang") || "en"
+    @lang = model.get("lang")
     #global.moment = moment
     @customFormat = model.get("format") || "L"
     @builders = new Builders(@lang, moment, @customFormat)
-    currentDate = moment()
+    if @lang?
+      currentDate = moment().locale(@lang)
     @gotoMonthView currentDate
 
   create: (model, dom) ->
+    self = @
     dom.on "click", (e) =>
       model.set "show", true if @parent.contains(e.target)
     dom.on "mousedown", (e) =>
       model.set "show", false unless @parent.contains(e.target)
+    @parseDate()
+    model.on "change", "active", (val, old, pass)->
+      return if pass.inner
+      self.parseDate()
 
   gotoMonthView: (date) ->
     @setCurrentDate date
@@ -85,7 +91,6 @@ module.exports = class Datepicker extends ViewHelpers
     currentMonth = currentDate.month()
     @gotoMonthView date  if selectedMonth isnt currentMonth
     @model.set "active", selectedDate.displayDate
-    @model.set "value", selectedDate.isoDate
     @model.set "show", false
 
   prevMonth: ->
@@ -109,3 +114,26 @@ module.exports = class Datepicker extends ViewHelpers
 
   getCurrentDate: ->
     @model.get "currentDate"
+
+  keyDown : (ev)->
+    if ev.keyCode in [13, 9]
+      date = moment @model.get("value")
+      if date.isValid()
+        @model.pass('inner': true).set("active", date.format("L"))
+      if ev.keyCode is 9 # tab
+        @model.set "show", false
+      # try pedirct date
+
+  parseDate : ()->
+    active = @model.get "active"
+    debugger
+    if !active
+      @model.set "value", null
+    else
+      parsed = moment(active, [
+        "DD", "DD-MM", "DD-MM-YYYY", "DD-MM-YY", "YYYY-MM-DD"
+      ])
+      if parsed.isValid()
+        @model.set "value", parsed.format()
+      else
+        @model.set "value", null

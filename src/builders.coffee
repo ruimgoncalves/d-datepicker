@@ -52,9 +52,10 @@ getDaysInCurrentMonth = (currentDate) ->
   date = currentDate.date(1)
   nrDaysInMonth = currentDate.daysInMonth()
   i = 1
+  today = new Date
 
   while i <= nrDaysInMonth
-    dates.push getDateObj(date, true)
+    dates.push getDateObj(date, true, date.isSame(today, "day"))
     date.add "days", 1
     i++
   dates
@@ -67,7 +68,7 @@ addExtraDaysFromPrevMonth = (currentDate) ->
 
   while i < firstDayOfMonth
     prevDay = firstDateOfMonth.subtract("days", 1)
-    dates.unshift getDateObj(prevDay, false)
+    dates.unshift getDateObj(prevDay, false, false)
     i++
   dates
 
@@ -83,7 +84,8 @@ addExtraDaysFromNextMonth = (currentDate) ->
     i++
   dates
 
-getDateObj = (date, isCurrentMonth) ->
+getDateObj = (date, isCurrentMonth, isToday) ->
   date: date.date()
   fullDate: date.format("YYYY-MM-DD")
   thisMonth: isCurrentMonth
+  isToday : isToday

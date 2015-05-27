@@ -52,7 +52,7 @@
       {{each weeks as #datesInWeek, #i}}
         <tr>
         {{each #datesInWeek as #date, #j}}
-          <td on-click="select(#date)" class="day {{if !#date.thisMonth}}old{{/if}} {{if activeDate(active, #date.fullDate)}}active{{/if}}">{{#date.date}}</td>
+          <td on-click="select(#date)" class="day {{if !#date.thisMonth}}old{{/if}} {{if #date.isToday}}today{{/if}} {{if activeDate(active, #date.fullDate)}}active{{/if}}">{{#date.date}}</td>
         {{/each}}
         </tr>
       {{/each}}

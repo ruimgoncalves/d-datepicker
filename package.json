@@ -19,7 +19,7 @@
     "prepublish": "grunt"
   },
   "dependencies": {
-    "moment": "~2.7.0"
+    "moment": "^2.10.3"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
